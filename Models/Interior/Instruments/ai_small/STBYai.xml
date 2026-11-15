@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!--
+Standby Gyro
+Syd Adams
+-->
+<PropertyList>
+
+<path>STBYai.ac</path>
+
+<animation>
+    <type>material</type>
+    <object-name>STBYai.face</object-name>
+    <object-name>STBYai.ball</object-name>
+    <object-name>Plane</object-name>
+        <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+    </emission>
+  </animation>
+
+    <animation>
+        <type>texmultiple</type>
+        <object-name>STBYai.ball</object-name>
+        <transform>
+            <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+            <subtype>textranslate</subtype>
+            <factor>0.00423</factor>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
+        </transform>
+        <transform>
+            <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+            <subtype>texrotate</subtype>
+            <center>
+                <x>0.25</x>
+                <y>0.50</y>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>-1</z>
+            </axis>
+        </transform>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>STBYai.rollneedle</object-name>
+        <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>cage.flag</object-name>
+        <property>instrumentation/attitude-indicator/caged-flag</property>
+        <factor>35</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0.031</y-m>
+            <z-m>0.013</z-m>
+        </center>
+    </animation>
+
+    
+    
+<animation>
+  <type>noshadow</type>
+	<object-name>STBYai.ball</object-name>
+	<object-name>cage.flag</object-name>
+	<object-name>STBYai.rollneedle</object-name>
+ </animation>
+ 
+ <!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.03</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.3</g>
+      <b>0.3</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>3</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.13</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+  
+  </condition>
+  </animation>
+
+</PropertyList>

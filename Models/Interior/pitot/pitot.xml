@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<PropertyList>
+    <path>PitotPanel.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+    
+  <animation>
+    <type>material</type>
+   	<object-name>Couronne</object-name>
+		<object-name>Couronne.001</object-name>
+			<object-name>Couronne.002</object-name>
+		<object-name>Couronne.003</object-name>
+		<object-name>Couronne.004</object-name>
+		<object-name>Couronne.006</object-name>
+		<object-name>BIPOL.002</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.0295</red>
+            <green>0.0075</green>
+            <blue>0.0075</blue>
+    </emission>
+  </animation>
+
+</PropertyList>

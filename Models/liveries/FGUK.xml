@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+	
+	<model>
+		<livery>
+			<name type="string">FGUK</name>
+			<texture>liveries/fguk.jpg</texture>
+			<texture2>liveries/white.png</texture2>
+		</livery>
+		<bk117>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bk117>
+	</model>
+	<rendering>
+    <refl_correction type="string">-0.19</refl_correction>
+	<fresnel-factor>0.5</fresnel-factor>
+    </rendering>
+	
+	</sim>
+</PropertyList>

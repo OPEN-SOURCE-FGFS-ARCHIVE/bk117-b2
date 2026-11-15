@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+	
+	
+	<model>
+		<livery>
+			<name type="string">Japanese Air Defense Force (Air Proving Wing)</name>
+			<texture>liveries/JADF.jpg</texture>
+			<texture2>liveries/white.png</texture2>
+		</livery>
+		<bk117>
+	   <hdr>false</hdr>
+		<als>true</als>
+		</bk117>
+	</model>
+	<rendering>
+    <refl_correction type="string">-0.71</refl_correction>
+	<fresnel-factor>0.5</fresnel-factor>
+    </rendering>
+	
+	
+	</sim>
+</PropertyList>

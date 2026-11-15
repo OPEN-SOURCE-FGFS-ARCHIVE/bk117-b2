@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!--
+  MD500 multiplayer passenger view.
+
+  Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<!--
+  Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+-->
+<PropertyList>
+
+ <sim>
+
+  <description>MBB BK117 B2 Multiplayer passenger</description>
+  <author>Anders Gidenstam</author>
+  <status>alpha</status>
+  <aircraft-version>$Id$</aircraft-version>
+  
+  <flight-model>null</flight-model>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-agl-ft type="double">30.0</altitude-agl-ft>
+  </presets>
+  
+  
+	<startup>
+			<splash-texture>Aircraft/bk117-b2/splash.png</splash-texture>
+		</startup>
+		
+		
+	<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash01.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash02.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash03.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/splash04.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/fgfs-20240204201742.png</path>
+			</preview>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/fgfs-20240204195340.png</path>
+			</preview>
+		</previews>
+	
+	<systems>
+			<electrical>
+				<path>Aircraft/bk117-b2/Systems/fgukelectrical.xml</path>
+			</electrical>
+
+			<autopilot n="101">
+				<path>Aircraft/bk117-b2/Systems/glass-rain.xml</path>
+			</autopilot>
+
+			<autopilot n="103">
+				<path>Aircraft/bk117-b2/Systems/sound-rules.xml</path>
+			</autopilot>
+		</systems>
+
+
+  <!-- 3d model -->
+  <model>
+   <path>Aircraft/bk117-b2/Models/BK117-Passenger.xml</path>
+   <bk117>
+
+				
+				<headsetholder>
+					<position-deg type="float">90.0</position-deg>
+				</headsetholder>
+
+			</bk117>
+  </model>
+  <rendering>
+    <refl_correction type="string">-0.22</refl_correction>
+	 <frensel-factor type="string">0.5</frensel-factor>
+    </rendering>
+
+   <!-- Views -->
+  <view n="0">
+   <!-- Passenger's position. -->
+   <name>Copilot View</name>
+   <type>lookfrom</type>
+   <config>
+    <internal type="bool">true</internal>
+    <from-model type="bool">false</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+    <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+    <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+    <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+    <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+    <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+
+    <!-- x/y/z == right/up/back -->
+   <x-offset-m type="double">-0.33</x-offset-m><!--left-->
+				<y-offset-m type="double">0.4</y-offset-m><!--up-->
+				<z-offset-m type="double">0.6</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+   </config>
+  </view>
+  <!-- Views -->
+ 	<view n="0">
+			<name>Cockpit</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+                                        <x-offset-m type="double">-0.43</x-offset-m><!--left-->
+				<y-offset-m type="double">0.25</y-offset-m><!--up-->
+				<z-offset-m type="double">0.86</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		
+		 <view n="101">
+    <name>Pilot cam</name>
+       <type>lookfrom</type>
+			<internal type="bool">true</internal>
+        <config>
+		 <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+          <x-offset-m type="double">0</x-offset-m><!--left-->
+				<y-offset-m type="double">0.43</y-offset-m><!--up-->
+				<z-offset-m type="double">0.5</z-offset-m><!--back-->
+          <pitch-offset-deg>-20</pitch-offset-deg>
+		  <heading-offset-deg>199</heading-offset-deg>
+          <default-field-of-view-deg>110</default-field-of-view-deg>
+        </config>
+     
+  </view>
+  
+  	<view n="102">
+			<name>Over the shoulder</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<x-offset-m archive="y">0.1</x-offset-m><!--right-->
+				<y-offset-m archive="y">0.4.7</y-offset-m><!--up-->
+				<z-offset-m archive="y">1.15</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+				<heading-offset-deg>0</heading-offset-deg>
+				<default-field-of-view-deg>95</default-field-of-view-deg>
+			</config>
+			
+		 </view>
+		 
+		 	<view n="102">
+			<name>Cabin view</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<x-offset-m archive="y">0.1</x-offset-m><!--right-->
+				<y-offset-m archive="y">0.4.7</y-offset-m><!--up-->
+				<z-offset-m archive="y">1.2</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+				<heading-offset-deg>180</heading-offset-deg>
+				<default-field-of-view-deg>95</default-field-of-view-deg>
+			</config>
+			
+		 </view>
+		 
+ <view n="1">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="2">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="4">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+
+  <chase-distance-m type="double">-18.0</chase-distance-m>
+<sound>
+			<path>Aircraft/bk117-b2/Sounds/sound.xml</path>
+		</sound>
+
+ 
+ <menubar>
+   <default>
+    <menu n="100">
+     <label>BK117-B2</label>
+     <item>
+      <label>Select MP-pilot</label>
+      <binding>
+       <command>nasal</command>
+       <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.pilot_type);
+       </script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+
+ </sim>
+ 
+ 	<instrumentation>
+		<gsdi>
+			<serviceable type="bool">true</serviceable>
+		</gsdi>
+		<hsi>
+			<serviceable type="bool" archive="y">true</serviceable>
+		</hsi>
+	</instrumentation>
+
+
+  <nasal>
+  	<FG1000>
+	<file>Aircraft/bk117-b2/Nasal/FGUK1000.nas</file>
+		
+	</FG1000>
+  <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/bk117-b2/Nasal/117-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+<bk117>
+			<file>Aircraft/bk117-b2/Nasal/rotorwash.nas</file>
+			<file>Aircraft/bk117-b2/Nasal/bk117.nas</file>
+			<file>Aircraft/bk117-b2/Nasal/engines.nas</file>
+			<file>Aircraft/bk117-b2/Nasal/wiper.nas</file>
+			<file>Aircraft/bk117-b2/Nasal/fcs.nas</file>
+			<file>Aircraft/bk117-b2/Nasal/liveries.nas</file>
+			<file>Aircraft/bk117-b2/Nasal/casdisable.nas</file>
+			<file>Aircraft/Instruments-3d/ki266/ki266.nas</file>
+			<file>Aircraft/bk117-b2/Systems/kcs55.nas</file>
+			<script><![CDATA[
+				KCS55.new();
+			  ]]>
+			</script>
+		</bk117>
+		
+		<kns80>
+           <file>Aircraft/bk117-b2/Models/Interior/Instruments/kns80/KNS80.nas</file>
+        </kns80>
+		
+		<lights>
+      <file>Aircraft/bk117-b2/Nasal/Lights.nas</file>
+    </lights>
+		
+			<sound-helper>
+      <file>Aircraft/bk117-b2/Nasal/sound-helper.nas</file>
+    </sound-helper> 
+	<kx165a>
+			<file>Aircraft/bk117-b2/Nasal/kx165a.nas</file>
+		</kx165a>
+		<gtx327>
+
+			<file>Aircraft/bk117-b2/Nasal/gtx-327.nas</file>
+
+		</gtx327>
+
+		<fgukelectrical>
+			<file>Aircraft/bk117-b2/Nasal/fgukelectrical.nas</file>
+		</fgukelectrical>
+	
+
+ </nasal>
+
+</PropertyList>

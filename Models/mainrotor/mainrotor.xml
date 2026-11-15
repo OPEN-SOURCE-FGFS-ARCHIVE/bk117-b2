@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>hub.ac</path>
+
+	<offsets>
+		<z-m>0.0</z-m>
+		<y-m>0</y-m>
+		<x-m>0</x-m>
+		<pitch-deg>0</pitch-deg>
+	</offsets>
+	
+
+
+	<params>
+		<flapA>
+			<factor>0.3</factor>
+		</flapA>
+		<flapB>
+			<factor>0.25</factor>
+		</flapB>
+		<flapC>
+			<factor>0.2</factor>
+		</flapC>
+		<flapD>
+			<factor>0.2</factor>
+		</flapD>
+		<flapE>
+			<factor>0.15</factor>
+		</flapE>
+	</params>
+
+	<!--  blades -->
+
+<model>
+        <name>blade-1</name>
+        <path>blade1.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+       <heading-deg>0</heading-deg>
+	  </offsets>
+      
+    </model>	
+		
+<model>
+        <name>blade-2</name>
+        <path>blade2.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+		 <heading-deg>-90</heading-deg>
+       </offsets>
+
+    </model>
+
+<model>
+        <name>blade-3</name>
+        <path>blade3.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+		 <heading-deg>180</heading-deg>
+       </offsets>
+
+    </model>	
+
+<model>
+        <name>blade-4</name>
+        <path>blade4.xml</path>
+        <offsets>
+          <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+		 <heading-deg>90</heading-deg>
+       </offsets>
+
+    </model>
+
+	
+	
+	 <animation>
+<name>main-hub</name>
+ <object-name>eye</object-name>
+  <object-name>star_hub</object-name>
+  <object-name>star_cap1</object-name>
+  <object-name>star_cap4</object-name>
+  <object-name>star_cap3</object-name>
+     <object-name>star_cap2</object-name>
+  <object-name>rotoraxis</object-name>
+  <object-name>swashplate_cap</object-name>
+  <object-name>swashplate_rotor</object-name>
+   <object-name>pitch_link4</object-name>
+  <object-name>pitch_link3</object-name>
+  <object-name>pitch_link2</object-name>
+  <object-name>pitch_link1</object-name>
+ 
+  </animation>
+	
+	
+	
+	 <animation>
+<name>rotorcomplete</name>
+ <object-name>main-hub</object-name>
+  <object-name>blade-1</object-name>
+  <object-name>blade-2</object-name>
+  <object-name>blade-3</object-name>
+  <object-name>blade-4</object-name>
+  </animation>
+  
+
+
+	<animation>
+		<type>spin</type>
+		<object-name>rotorcomplete</object-name>
+			<property>rotors/main/rpm</property>
+		<factor>1.0</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+
+	
+</PropertyList>
+
+
+

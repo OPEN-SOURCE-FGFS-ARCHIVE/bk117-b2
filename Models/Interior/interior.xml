@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<!-- MBB BK117 Helicopter by Heiko Schulz, animation set -->
+
+<PropertyList>
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+
+
+<path>interior.ac</path>
+
+<!-- sticks n stuff -->
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/cyclic.xml</path>
+		<offsets>
+			<x-m>-2.155</x-m>
+			<y-m>0.405</y-m>
+			<z-m>-0.49</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+	
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/cyclic.xml</path>
+		<offsets>
+			<x-m>-2.155</x-m>
+			<y-m>-0.395</y-m>
+			<z-m>-0.49</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/collective.xml</path>
+		<offsets>
+			<x-m>-1.7</x-m>
+			<y-m>0.1</y-m>
+			<z-m>-0.42</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/collective.xml</path>
+		<offsets>
+			<x-m>-1.7</x-m>
+			<y-m>-0.65</y-m>
+			<z-m>-0.42</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+
+<!--== instruments ==-->
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/instruments.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.045</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/centre.xml</path>
+		<offsets>
+			<x-m>-0.03</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Overheadpanel.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+	</model>
+		
+</PropertyList>

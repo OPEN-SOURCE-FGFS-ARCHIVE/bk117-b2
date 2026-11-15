@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>oil_temp.ac</path>
+
+	<!--effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+		<object-name>face</object-name> 
+		<object-name>needle</object-name> 
+	</effect-->
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+    </emission>
+  </animation>
+	
+  <animation>
+    <type>rotate</type><!-- this is bit of a cheat beause there isn't 
+                            an engine-oil-temperature property available -->  
+    <object-name>needle</object-name>
+    <property>/engines/engine/tot-degc</property>
+    <interpolation>
+      <entry><ind> -400 </ind><dep>  0 </dep></entry>
+      <entry><ind>  0 </ind><dep> 45 </dep></entry>
+      <entry><ind>  800 </ind><dep>180 </dep></entry><!-- 60 deg C -->
+      <entry><ind> 1600 </ind><dep>225 </dep></entry>
+      <entry><ind> 2000 </ind><dep>270 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/surround/surround.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.001</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="900">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.5</y-offset>
+    <z-offset>0.5</z-offset>
+   </animation>
+  </overlay>
+		</model>	
+
+<!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.03</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.3</g>
+      <b>0.3</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>17</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.13</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+  
+  </condition>
+  </animation>
+
+
+</PropertyList>
+

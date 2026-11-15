@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/bk117-b2/Models/People/HEMS-crew/pilot.xml</path>
+<offsets>
+<x-m> -6.66 </x-m>
+<y-m>  0.4 </y-m>
+<z-m> -1.04 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>pilot2</name>
+<path>Aircraft/bk117-b2/Models/People/HEMS-crew/copilot.xml</path>
+<offsets>
+<x-m> -6.66 </x-m>
+<y-m>  -0.4 </y-m>
+<z-m> -1.04 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>crew1</name>
+<path>Aircraft/bk117-b2/Models/People/HEMS-crew/crew2.xml</path>
+<offsets>
+<x-m> -4.6 </x-m>
+<y-m>  -0.37 </y-m>
+<z-m> -1.05 </z-m>
+
+<heading-deg>-90</heading-deg>
+</offsets>
+
+</model>
+<!-- Crew seats -->
+
+<!--  front row -->
+
+
+
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/hems/chair.xml</path>
+<offsets>
+<x-m> -4.0 </x-m>
+<y-m>  -0.35 </y-m>
+<z-m> -1.32578 </z-m>
+<heading-deg>180</heading-deg>
+</offsets>
+</model>
+
+
+
+
+
+
+<model>
+<path>Aircraft/bk117-b2/Models/Divers//hems/chair.xml</path>
+<offsets>
+<x-m> -4.61054 </x-m>
+<y-m>  -0.35 </y-m>
+<z-m> -1.32578 </z-m>
+<heading-deg>180</heading-deg>
+</offsets>
+</model>
+
+<!-- box -->
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/hems/box.xml</path>
+<offsets>
+<x-m> -5.14 </x-m>
+<y-m>  -0.49 </y-m>
+<z-m> -1.32578 </z-m>
+<heading-deg>0</heading-deg>
+</offsets>
+</model>
+
+<!-- paramedic pack -->
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/hems/medipack.xml</path>
+<offsets>
+<x-m> -4.25 </x-m>
+<y-m>  -0.42 </y-m>
+<z-m> -1.32578 </z-m>
+<heading-deg>00</heading-deg>
+</offsets>
+</model>
+
+<!-- defib -->
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/hems/defib.xml</path>
+<offsets>
+<x-m> -6.27 </x-m>
+<y-m>  -0.1 </y-m>
+<z-m> -0.8 </z-m>
+<heading-deg>0</heading-deg>
+</offsets>
+</model>
+
+<!-- mask -->
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/hems/mask.xml</path>
+<offsets>
+<x-m> -6.27 </x-m>
+<y-m>  -0.05 </y-m>
+<z-m> -0.4 </z-m>
+<heading-deg>0</heading-deg>
+</offsets>
+</model>
+
+
+<!-- Bed -->
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/Seats/bed.xml</path>
+<offsets>
+<x-m> -5.9 </x-m>
+<y-m>  0.0 </y-m>
+<z-m> -0.1 </z-m>
+</offsets>
+<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.85</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+</model>
+
+<!-- Search Light -->
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/SearchLight/searchlight.xml</path>
+<offsets>
+<x-m> -4.89656 </x-m>
+<y-m>  0.29294 </y-m>
+<z-m> -1.61 </z-m>
+</offsets>
+</model>
+
+<!-- FLIR -->
+
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/flir/flir.xml</path>
+<offsets>
+<x-m> -7.08 </x-m>
+<y-m>  1.01 </y-m>
+<z-m> -1.27 </z-m>
+</offsets>
+</model>
+
+
+
+
+<!-- wide step -->
+<model>
+<path>Aircraft/bk117-b2/Models/skidplates.ac</path>
+<offsets>
+<x-m> -5. </x-m>
+<y-m>  0.00000 </y-m>
+<z-m> -0.78</z-m>
+</offsets>
+</model>
+
+
+
+<model>
+<path>Aircraft/bk117-b2/Models/Divers/winch/winch.xml</path>
+<offsets>
+<x-m> -5. </x-m>
+<y-m>  0.00000 </y-m>
+<z-m> -0.78</z-m>
+</offsets>
+</model>
+
+<!-- nose cone -->
+<model>
+<path>Aircraft/bk117-b2/Models/nosecone.xml</path>
+<offsets>
+<x-m> -5. </x-m>
+<y-m>  0.00000 </y-m>
+<z-m> -0.78</z-m>
+</offsets>
+</model>
+
+</PropertyList>

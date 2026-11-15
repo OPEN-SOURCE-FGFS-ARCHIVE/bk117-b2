@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<path>Overheadpanel.ac</path>
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>50</max-m>
+    </animation>
+
+<animation>
+<type>rotate</type>
+<object-name>HandleLH</object-name>
+
+<object-name>KnobLH</object-name>
+
+<property>controls/engines/engine/power</property>
+<factor>60</factor>
+<center>
+<x-m>-1.892</x-m>
+<y-m>-0.05</y-m>
+<z-m>0.82</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>1</y>
+<z>0</z>
+</axis>
+</animation>
+
+
+<animation>
+<type>rotate</type>
+
+<object-name>HandleRH</object-name>
+
+<object-name>KnobRH</object-name>
+<property>controls/engines/engine[1]/power</property>
+<factor>60</factor>
+<center>
+<x-m>-1.892</x-m>
+<y-m>0.05</y-m>
+<z-m>0.82</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>1</y>
+<z>0</z>
+</axis>
+</animation>
+
+<!-- individual  engine start -->
+
+   <animation>
+    <type>pick</type>
+    <object-name>KnobLH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+ 		  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/ignition</property>
+      </binding>	
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/starter</property>
+      </binding>
+	  
+    </action>
+  </animation>
+  
+   <animation>
+    <type>pick</type>
+   <object-name>KnobRH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+ 		   <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/throttle</property>
+      </binding>  
+	    <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/ignition</property>
+      </binding>	
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>
+

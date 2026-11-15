@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">FlightGear</name>
+					<texture>liveries/FLIGHTGEAR.dds</texture>
+					<texture2>liveries/white.png</texture2>
+				</livery>
+				
+	  <rendering>
+    <refl_correction type="string">-0.05</refl_correction>
+    </rendering>
+	</sim>
+</PropertyList>

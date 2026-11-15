@@ -1,0 +1,719 @@
+<?xml version="1.0"?>
+
+<!-- MBB BK117 Helicopter by Heiko Schulz, animation set -->
+
+<PropertyList>
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>50</max-m>
+    </animation>
+
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/fire/fire.xml</path>
+		<offsets>
+			<x-m>-2.54</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.25</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		
+	</model>
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/plates/engine.xml</path>
+		<offsets>
+			<x-m>-2.525</x-m>
+			<y-m>0.002</y-m>
+			<z-m>0.22</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.8</x-offset>
+    <y-offset>2.7</y-offset>
+    <z-offset>0.1</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/plates/oil.xml</path>
+		<offsets>
+			<x-m>-2.502</x-m>
+			<y-m>0.002</y-m>
+			<z-m>0.0637</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.8</x-offset>
+    <y-offset>2.7</y-offset>
+    <z-offset>0.15</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+
+<!--== instruments ==-->
+
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/oat/oat.xml</path>
+		<offsets>
+			<x-m>-2.2</x-m>
+			<y-m>0.101</y-m>
+			<z-m>0.7</z-m>
+			<pitch-deg>45</pitch-deg>
+			<heading-deg>0</heading-deg>
+			<roll-deg>0</roll-deg>
+		</offsets>
+		
+	</model>
+
+	<model>
+		<name>COMP</name><!-- compass -->
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/MagCompass/magcompass.xml</path>
+		<offsets>
+			<x-m>-2.42</x-m>
+			<y-m>0.001</y-m>
+			<z-m>0.5154</z-m>
+			<pitch-deg>-7</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.8</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<model>
+		<name>AI1</name>
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/GH14-391/ai.xml</path>
+		<offsets>
+			<x-m>-2.52</x-m>
+			<y-m>0.385</y-m>
+			<z-m>0.15</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+	<model>
+		<name>AI2</name>
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/GH14-391/ai.xml</path>
+		<offsets>
+			<x-m>-2.52</x-m>
+			<y-m>-0.37</y-m>
+			<z-m>0.15</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/kcs55/ki525a.xml</path>
+		<offsets>
+			<x-m>-2.5</x-m>
+			<y-m>0.385</y-m>
+			<z-m>0.045</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/kcs55/ka51b.xml</path>
+		<offsets>
+			<x-m>-2.491</x-m>
+			<y-m>0.3</y-m>
+			<z-m>-0.009</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/kcs55/ki525a.xml</path>
+		<offsets>
+			<x-m>-2.5</x-m>
+			<y-m>-0.37</y-m>
+			<z-m>0.045</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+			<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/kcs55/ka51b.xml</path>
+		<offsets>
+			<x-m>-2.491</x-m>
+			<y-m>-0.3</y-m>
+			<z-m>-0.009</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/masterwarn/masterwarn.xml</path>
+		<offsets>
+			<x-m>-2.525</x-m>
+			<y-m>0.3</y-m>
+			<z-m>0.218</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		
+		
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/asi/asi.xml</path>
+		<offsets>
+			<x-m>-2.52</x-m>
+			<y-m>0.3</y-m>
+			<z-m>0.165</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/asi/asi.xml</path>
+		<offsets>
+			<x-m>-2.52</x-m>
+			<y-m>-0.47</y-m>
+			<z-m>0.125</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+			
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/alt/alt.xml</path>
+		<offsets>
+			<x-m>-2.52</x-m>
+			<y-m>0.473</y-m>
+			<z-m>0.125</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		<model>
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/masterwarn/masterwarn.xml</path>
+		<offsets>
+			<x-m>-2.525</x-m>
+			<y-m>-0.28</y-m>
+			<z-m>0.218</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		
+		<model>
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/alt/alt.xml</path>
+		<offsets>
+			<x-m>-2.52</x-m>
+			<y-m>-0.28</y-m>
+			<z-m>0.165</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/vor/vor.xml</path>
+		<offsets>
+			<x-m>-2.5</x-m>
+			<y-m>0.3</y-m>
+			<z-m>0.085</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		
+			<model>
+		
+		<path>Aircraft/Instruments-3d/ki266/ki266.xml</path>
+		<offsets>
+			<x-m>-2.494</x-m>
+			<y-m>0.3</y-m>
+			<z-m>0.027</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/vor/vor2.xml</path>
+		<offsets>
+			<x-m>-2.49</x-m>
+			<y-m>-0.47</y-m>
+			<z-m>0.05</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/vsi/vsi.xml</path>
+		<offsets>
+			<x-m>-2.505</x-m>
+			<y-m>0.473</y-m>
+			<z-m>0.045</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/vsi/vsi.xml</path>
+		<offsets>
+			<x-m>-2.51</x-m>
+			<y-m>-0.28</y-m>
+			<z-m>0.084</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/compas/mag-compass.xml</path>
+		<offsets>
+			<x-m>-2.4975</x-m>
+			<y-m>-0.285</y-m>
+			<z-m>0.015</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.3</x-offset>
+    <y-offset>2.0</y-offset>
+    <z-offset>1.0</z-offset>
+   </animation>
+  </overlay>
+		</model>
+		
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/ai_small/STBYai.xml</path>
+		<offsets>
+			<x-m>-2.525</x-m>
+			<y-m>0.195</y-m>
+			<z-m>0.185</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.5</y-offset>
+    <z-offset>1.5</z-offset>
+   </animation>
+  </overlay>
+		</model>	
+		
+		
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/tach/tach.xml</path>
+		<offsets>
+			<x-m>-2.525</x-m>
+			<y-m>0.105</y-m>
+			<z-m>0.185</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.88</z-offset>
+   </animation>
+  </overlay>
+		</model>		
+		
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/torque/torque.xml</path>
+		<offsets>
+		<x-m>-2.51</x-m>
+			<y-m>0.105</y-m>
+			<z-m>0.105</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.2</y-offset>
+    <z-offset>1.2</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>			
+		
+		
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/ralt/ralt.xml</path>
+		<offsets>
+			<x-m>-2.51</x-m>
+			<y-m>0.195</y-m>
+			<z-m>0.105</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>	
+	
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/spz700/spz700.xml</path>
+		<offsets>
+			<x-m>-2.495</x-m>
+			<y-m>0.195</y-m>
+			<z-m>0.01</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>	
+
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/clock/clock.xml</path>
+		<offsets>
+			<x-m>-2.477</x-m>
+			<y-m>0.182</y-m>
+			<z-m>-0.09</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>	
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/wipers/wipers.xml</path>
+		<offsets>
+			<x-m>-2.476</x-m>
+			<y-m>0.232</y-m>
+			<z-m>-0.06</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>		
+		
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/n1_1.xml</path>
+		<offsets>
+		<x-m>-2.527</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>0.186</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.0</y-offset>
+    <z-offset>1.0</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>		
+	
+	
+	<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/n1_2.xml</path>
+		<offsets>
+		<x-m>-2.527</x-m>
+			<y-m>0.03</y-m>
+			<z-m>0.186</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.0</y-offset>
+    <z-offset>1.0</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>		
+		
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/temp.xml</path>
+		<offsets>
+		<x-m>-2.519</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>0.14</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>		
+
+
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/temp2.xml</path>
+		<offsets>
+		<x-m>-2.519</x-m>
+			<y-m>0.03</y-m>
+			<z-m>0.14</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>			
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/oil_temp.xml</path>
+		<offsets>
+		<x-m>-2.508</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>0.09</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>			
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/oil_temp2.xml</path>
+		<offsets>
+		<x-m>-2.508</x-m>
+			<y-m>0.03</y-m>
+			<z-m>0.09</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>			
+
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/mgb_temp.xml</path>
+		<offsets>
+		<x-m>-2.4986</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>0.03</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.2</y-offset>
+    <z-offset>1.2</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/engine/oilpsi.xml</path>
+		<offsets>
+		<x-m>-2.499</x-m>
+			<y-m>0.03</y-m>
+			<z-m>0.03</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.3</y-offset>
+    <z-offset>1.3</z-offset>
+   </animation>
+  </overlay>
+		
+		
+		</model>		
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/sas/sas.xml</path>
+		<offsets>
+		<x-m>-2.4895</x-m>
+			<y-m>-0.034</y-m>
+			<z-m>-0.02</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+
+		
+		
+		
+		</model>		
+				
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/fuel/fuelqty.xml</path>
+		<offsets>
+			<x-m>-2.5255</x-m>
+			<y-m>-0.105</y-m>
+			<z-m>0.18</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1.95</y-offset>
+    <z-offset>1.95</z-offset>
+   </animation>
+  </overlay>
+		</model>	
+
+		
+		<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/MMI/mmi.xml</path>
+		<offsets>
+			<x-m>-2.5255</x-m>
+			<y-m>-0.190</y-m>
+			<z-m>0.19</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		<overlay>
+				 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.70</x-offset>
+    <y-offset>0.70</y-offset>
+    <z-offset>0.70</z-offset>
+   </animation>
+  </overlay>
+		</model>
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/helimap/helimap.xml</path>
+		<offsets>
+			<x-m>-2.48</x-m>
+			<y-m>-0.143</y-m>
+			<z-m>0.05</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		
+		</model>	
+
+
+
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/vents/vent1.xml</path>
+		<offsets>
+			<x-m>-2.505</x-m>
+			<y-m>0.55</y-m>
+			<z-m>0.03</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>		
+		
+		
+<model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/vents/vent1.xml</path>
+		<offsets>
+			<x-m>-2.505</x-m>
+			<y-m>-0.55</y-m>
+			<z-m>0.03</z-m>
+			<pitch-deg>-10</pitch-deg>
+		</offsets>
+		</model>		
+		
+</PropertyList>

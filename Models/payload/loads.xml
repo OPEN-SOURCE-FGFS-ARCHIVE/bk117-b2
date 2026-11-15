@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+
+
+<model>
+		<name>Pylons</name>
+		<path>Aircraft/bk117-b2/Models/payload/pylons.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+
+<!-- passenger -->
+
+
+
+  <model>
+		<name>Passenger</name>
+		<path>Aircraft/bk117-b2/Models/payload/passenger.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Passenger</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Passenger</value>
+        </equals>
+       
+    </condition>
+  </animation>	
+
+
+ 
+  <model>
+		<name>SAR</name>
+		<path>Aircraft/bk117-b2/Models/payload/sar.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>SAR</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>SAR</value>
+        </equals>
+     
+    </condition>
+  </animation>
+
+
+ <model>
+		<name>Law Enforcement</name>
+		<path>Aircraft/bk117-b2/Models/payload/law.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Law Enforcement</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Law Enforcement</value>
+        </equals>
+       
+    </condition>
+  </animation>
+
+ <model>
+		<name>Medivac</name>
+		<path>Aircraft/bk117-b2/Models/payload/medivac.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Medivac</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Medivac</value>
+        </equals>
+       
+    </condition>
+  </animation>
+<!--
+    <model>
+		<name>Military Transport</name>
+		<path>Aircraft/bk117-b2/Models/payload/mil.xml</path>
+		<offsets>
+			<x-m>5</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0.8 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Military Transport</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Military Transport</value>
+        </equals>
+       
+    </condition>
+  </animation>
+-->
+
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C</object-name>  
+  <condition>
+  <or>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Law Enforcement</value>
+   </equals>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Medivac</value>
+   </equals>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>SAR</value>
+   </equals>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Passenger</value>
+   </equals>
+  
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Military Transport</value>
+   </equals>
+   
+  </or>
+  </condition>
+ </animation>
+ 
+  <model>
+		<name>Floatation_System</name>
+		<path>Aircraft/bk117-b2/Models/Divers/Floats/Floats.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+            <y-m>  0.00000 </y-m>
+            <z-m>0 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Floatation_System</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[2]</property>
+          <value>Floatation_System</value>
+        </equals>
+       
+    </condition>
+  </animation>
+  
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C1</object-name>  
+  <condition>
+ 
+   <equals>
+    <property>sim/multiplay/generic/string[2]</property>
+    <value>Floatation_System</value>
+   </equals>
+  
+  
+  </condition>
+ </animation>
+
+</PropertyList>

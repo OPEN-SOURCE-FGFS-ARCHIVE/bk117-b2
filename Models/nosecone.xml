@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>Aircraft/bk117-b2/Models/nosecone.ac</path>
+  
+ <effect>
+		<inherits-from>Aircraft/bk117-b2/Models/Effects/reflect-uber</inherits-from>
+		
+		
+		<object-name>radom</object-name>
+		
+</effect>
+  
+
+
+
+ 
+
+  
+  
+ 
+		
+
+</PropertyList>

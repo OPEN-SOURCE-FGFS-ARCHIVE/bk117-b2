@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+ <path>winch.ac</path>
+ 
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>100</max-m>
+ </animation>
+ 
+  <model>
+            <name>Rescue-Op</name>
+            <path>Aircraft/bk117-b2/Models/Divers/Rescue/Rescue-Op.xml</path>
+            <offsets>
+                    <x-m>-0.9</x-m>
+                    <y-m>-0.92</y-m>
+                    <z-m>-5.33</z-m>
+            </offsets>
+        </model>
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>winch1</object-name>
+   <object-name>Rescue-Op</object-name>
+  
+  <property>sim/multiplay/generic/float[3]</property>
+  
+  <factor>30</factor>
+  <axis>
+   <x1-m>0.55</x1-m>
+   <y1-m>-0.9</y1-m>
+   <z1-m>-0.18</z1-m>
+   <x2-m>0.53</x2-m>
+   <y2-m>-0.9</y2-m>
+   <z2-m>0.99</z2-m>
+  </axis>
+ </animation>
+	
+	
+</PropertyList>
+
+
+

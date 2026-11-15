@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+
+ <params>
+  <nav-to-flag>/instrumentation/nav[0]/to-flag</nav-to-flag>
+  <nav-from-flag>/instrumentation/nav[0]/from-flag</nav-from-flag>
+  <nav-radial-selected>/instrumentation/nav[0]/radials/selected-deg</nav-radial-selected>
+  <nav-gs-needle-deflection>/instrumentation/nav[0]/gs-needle-deflection</nav-gs-needle-deflection>
+  <nav-heading-needle-deflection>/instrumentation/nav[0]/heading-needle-deflection</nav-heading-needle-deflection>
+  <nav-in-range>/instrumentation/nav[0]/in-range</nav-in-range>
+  <gs-in-range>/instrumentation/nav[0]/gs-in-range</gs-in-range>
+ </params>
+
+ <path>vor.ac</path>
+ 
+ 
+	 <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+        <object-name>Ring</object-name>
+	 <object-name>Front</object-name>
+  
+    </effect> 
+ 
+
+ <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>GlideslopeNeedle</object-name>
+  <object-name>Ring</object-name>
+  <object-name>LocalizerNeedle</object-name>
+  <object-name>Front</object-name>
+  <object-name>TO</object-name>
+  <object-name>FR</object-name>
+  <object-name>NAV</object-name>
+  <object-name>GS_out_of_range</object-name>
+  <object-name>GS_in_range</object-name>
+  <object-name>disk</object-name>
+    <emission>
+          <red>0.79</red>
+            <green>0.39</green>
+            <blue>0.198</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>disk</object-name>
+  <condition>
+      <property>/controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+ </animation>
+
+ <animation>
+  <name>LocalizerNeedleTransform</name>
+  <type>rotate</type>
+  <object-name>LocalizerNeedle</object-name>
+  <property alias="../../params/nav-heading-needle-deflection"/>
+  <factor>-2.8</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>GS_in_range</object-name>
+  <condition>
+   <property alias="../../../params/gs-in-range"/>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>GS_out_of_range</object-name>
+  <condition>
+   <not>
+    <property alias="../../../../params/gs-in-range"/>
+   </not>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>NAV</object-name>
+  <condition>
+   <not>
+    <property alias="../../../../params/nav-in-range"/>
+   </not>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>TO</object-name>
+  <condition>
+   <property alias="../../../params/nav-to-flag"/>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>FR</object-name>
+  <condition>
+   <property alias="../../../params/nav-from-flag"/>
+  </condition>
+ </animation>
+
+ <animation>
+  <name>GlideslopeNeedleTransform</name>
+  <type>rotate</type>
+  <object-name>GlideslopeNeedle</object-name>
+   <property alias="../../params/nav-gs-needle-deflection"/>
+  <factor>-25</factor>
+  <min-deg>-25</min-deg>
+  <max-deg>25</max-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.03</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <name>RingTransform</name>
+  <type>rotate</type>
+  <object-name>Ring</object-name>
+   <property alias="../../params/nav-radial-selected"/>
+  <factor>-1</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!--	VOR 1 Radial adjust  -->
+
+<animation>
+    <type>knob</type>
+     <type>pick</type>
+     <object-name>click-R</object-name>
+      <object-name>click-L</object-name>
+     <visible>false</visible>
+
+     <shift-repeat type="int">5</shift-repeat>
+     
+     <action>
+         <binding>
+           <command>property-adjust</command>
+           <property>/instrumentation/nav/radials/selected-deg</property>
+           <factor>1</factor>
+           <min>0</min>
+           <max>360</max>
+           <wrap>1</wrap>
+         </binding>
+    </action>
+    
+    <hovered>
+     <binding>
+       <command>set-tooltip</command>
+       <tooltip-id>nav1-obs</tooltip-id>
+       <label>Nav 1 Radial %3d</label>
+       <mapping>heading</mapping>
+       <property>/instrumentation/nav/radials/selected-deg</property>
+    </binding>
+    </hovered>
+ </animation>
+     
+ 
+
+ <animation>
+  <name>Alpha Order Group</name>
+  <object-name>Face</object-name>
+  <object-name>LocalizerNeedleTransform</object-name>
+  <object-name>GlideslopeNeedleTransform</object-name>
+  <object-name>RingTransform</object-name>
+  <object-name>Front</object-name>
+ </animation>
+ 
+ <model>
+		
+		<path>Aircraft/bk117-b2/Models/Interior/Instruments/surround/surround.xml</path>
+		<offsets>
+			<x-m>-0.009</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0009</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		</model>
+		
+	<!-- Coompositor lights-->
+  
+  <light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>0.03</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.3</g>
+      <b>0.3</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>0</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.13</intensity>
+  <dim-factor>
+    <property>systems/electrical/outputs/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+  
+  </condition>
+  </animation>	
+
+</PropertyList>
+
+

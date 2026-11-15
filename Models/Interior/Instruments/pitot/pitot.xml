@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+
+<PropertyList>
+    <path>PitotPanel.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+    
+  <animation>
+    <type>material</type>
+   	<object-name>Couronne</object-name>
+		<object-name>Couronne.001</object-name>
+			<object-name>Couronne.002</object-name>
+		<object-name>Couronne.003</object-name>
+		<object-name>Couronne.004</object-name>
+		<object-name>Couronne.006</object-name>
+		<object-name>BIPOL.002</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.0295</red>
+            <green>0.0075</green>
+            <blue>0.0075</blue>
+    </emission>
+  </animation>
+  
+    <animation>
+    <type>pick</type>
+    <object-name>Eng1-Inter</object-name>
+    <object-name>Interrupteur-base</object-name>
+    <object-name>info</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/pitot-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>Eng1-Inter</object-name>
+     <property>controls/anti-ice/pitot-heat</property>
+    <factor> 35 </factor>
+	    <center>
+      <x-m> 0.00221 </x-m>
+      <y-m>  0.06336 </y-m>
+      <z-m>  -0.00643 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+      <animation>
+    <type>pick</type>
+    <object-name>Eng1-Inter.001</object-name>
+    <object-name>Interrupteur-base.001</object-name>
+    <object-name>info</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/pitot-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>Eng1-Inter.001</object-name>
+     <property>controls/anti-ice/pitot-heat</property>
+    <factor> 35 </factor>
+	    <center>
+      <x-m> 0.00221 </x-m>
+      <y-m>  0.06336 </y-m>
+      <z-m>  -0.00643 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+        <animation>
+    <type>pick</type>
+    <object-name>Eng1-Inter.001</object-name>
+    <object-name>Interrupteur-base.001</object-name>
+    <object-name>info</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/pitot-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>Eng1-Inter.001</object-name>
+     <property>controls/anti-ice/pitot-heat</property>
+    <factor> 35 </factor>
+	    <center>
+      <x-m> 0.00221 </x-m>
+      <y-m>  0.04754 </y-m>
+      <z-m>  -0.00643 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+        <animation>
+    <type>pick</type>
+    <object-name>Eng1-Inter.002</object-name>
+    <object-name>Interrupteur-base.002</object-name>
+    <object-name>info</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/engine/carb-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>Eng1-Inter.002</object-name>
+     <property>controls/anti-ice/engine/carb-heat</property>
+    <factor> 35 </factor>
+	    <center>
+      <x-m> 0.00221 </x-m>
+      <y-m>  0.06336 </y-m>
+      <z-m>  -0.00643 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+        <animation>
+    <type>pick</type>
+    <object-name>Eng1-Inter.003</object-name>
+    <object-name>Interrupteur-base.003</object-name>
+    <object-name>info</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/engine/inlet-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>Eng1-Inter.003</object-name>
+     <property>controls/anti-ice/engine/inlet-heat</property>
+    <factor> 35 </factor>
+	    <center>
+      <x-m> 0.00221 </x-m>
+      <y-m>  0.06336 </y-m>
+      <z-m>  -0.00643 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

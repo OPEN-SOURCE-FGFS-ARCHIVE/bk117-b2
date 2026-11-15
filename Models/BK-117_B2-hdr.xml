@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+
+<!--MBB BK117 Helicopter by Heiko Schulz, animation set -->
+
+<PropertyList>
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>15000</max-m>
+    </animation>
+
+
+	<path>bk117.ac</path>
+	<!--<offsets>
+		<x-m>2.5</x-m>
+		<z-m>-0.3</z-m>
+		<pitch-deg>0.2</pitch-deg>
+	</offsets>-->
+	
+	
+	
+	
+<!-- shader -->
+<effect>
+		<inherits-from>Aircraft/bk117-b2/Models/Effects/reflect-uber</inherits-from>
+		
+		<object-name>fuselage</object-name>
+		<object-name>frontdoor_right</object-name>
+		<object-name>frontdoor_left</object-name>
+		<object-name>backdoor_right</object-name>
+		<object-name>backdoor_left</object-name>
+		<object-name>wire_cutter</object-name>
+		<object-name>skid</object-name>
+		<object-name>skid_floats</object-name>
+		<object-name>sandfilter</object-name>
+		<object-name>reardoor_right</object-name>
+		<object-name>reardoor_left</object-name>
+		<object-name>reardoor_wind_right</object-name>
+		<object-name>reardoor_wind_left</object-name>
+		<object-name>Plane.011</object-name>
+		<object-name>nose</object-name>
+		<object-name>Plane.009</object-name>
+		<object-name>Plane.010</object-name>
+		<object-name>nacaintake</object-name>
+		<object-name>winfl</object-name>
+		<object-name>winbl</object-name>
+		<object-name>winbr</object-name>
+		<object-name>winfr</object-name>
+		<object-name>Fuselage.002</object-name>
+		<object-name>rotorheaddisc</object-name>
+</effect>
+
+<effect>
+		<!--<inherits-from>Aircraft/bk117-b2/Models/Effects/bk117reflectglas-uber</inherits-from>-->
+		<inherits-from>Aircraft/bk117-b2/Models/Effects/glassout</inherits-from>
+		<object-name>frontdoorglas_left</object-name>
+		<object-name>frontdoorglas_right</object-name>
+		<object-name>window</object-name>
+		<object-name>backdoorglas_right</object-name>
+		<object-name>backdoorglas_left</object-name>
+		<object-name>rearwind_left</object-name>
+		<object-name>rearwind_right</object-name>	
+</effect>
+
+<animation>
+  <type>select</type>
+  <object-name>frontdoorglas_left</object-name>
+		<object-name>frontdoorglas_right</object-name>
+		<object-name>window</object-name>
+		<object-name>backdoorglas_right</object-name>
+		<object-name>backdoorglas_left</object-name>
+		<object-name>rearwind_left</object-name>
+		<object-name>rearwind_right</object-name>		
+  <condition>
+<not>
+   <equals>
+    <property>sim/current-view/internal</property>
+    <value>true</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+
+
+	 <effect>
+        <inherits-from>Effects/glass</inherits-from>
+      <object-name>frontdoorglas_leftin</object-name>
+		<object-name>frontdoorglas_rightin</object-name>
+		<object-name>windowin</object-name>
+		<object-name>backdoorglas_rightin</object-name>
+		<object-name>backdoorglas_leftin</object-name>
+		<object-name>rearwind_leftin</object-name>
+		<object-name>rearwind_rightin</object-name>	
+    </effect>
+	
+	
+<animation>
+  <type>select</type>
+   <object-name>frontdoorglas_leftin</object-name>
+		<object-name>frontdoorglas_rightin</object-name>
+		<object-name>windowin</object-name>
+		<object-name>backdoorglas_rightin</object-name>
+		<object-name>backdoorglas_leftin</object-name>
+		<object-name>rearwind_leftin</object-name>
+		<object-name>rearwind_rightin</object-name>	
+  <condition>
+
+   <equals>
+    <property>sim/current-view/internal</property>
+    <value>true</value>
+   </equals>
+   
+  </condition>
+ </animation>		
+	
+
+		  <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+         <object-name>propblur</object-name>
+      <object-name>tailrotor_blade2</object-name>
+ <object-name>tailrotor_blade1</object-name>
+     
+    </effect> 
+	
+	<animation>
+		<type>select</type>
+		  <object-name>propblur</object-name>
+		<condition>
+			<greater-than>
+				<property>rotors/main/rpm</property>
+				<value>180.999</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+		<animation>
+		<type>material</type>
+		<object-name>propblur</object-name>
+		<transparency>
+			<alpha-prop>rotors/tail/rpm</alpha-prop>
+			<factor>0.0015</factor>
+			<offset>-0.2</offset>
+			<max>1.0</max>
+		</transparency>
+		<threshold>0.008</threshold>
+	</animation>
+	
+		<animation>
+		<type>material</type>
+		<object-name>tailrotor_blade1</object-name>
+		<object-name>tailrotor_blade2</object-name>
+		<transparency>
+			<alpha-prop>rotors/tail/rpm</alpha-prop>
+			<factor>-0.0015</factor>
+			<offset>1</offset>
+		</transparency>
+	</animation>
+</PropertyList>

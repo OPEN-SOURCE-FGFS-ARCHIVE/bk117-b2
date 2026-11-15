@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+	
+	<model>
+		<livery>
+			<name type="string">Default - ADAC Luftretting</name>
+			<texture>liveries/ADAC.jpg</texture>
+			<texture2>liveries/orange.png</texture2>
+		</livery>
+		  <bk117>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bk117>
+	</model>
+	
+<rendering>
+    <refl_correction type="string">-0.22</refl_correction>
+	<fresnel-factor>0.5</fresnel-factor>
+    </rendering>	
+	
+	
+	
+	
+	</sim>
+</PropertyList>
